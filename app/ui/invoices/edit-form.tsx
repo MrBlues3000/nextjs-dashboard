@@ -10,6 +10,7 @@ import { useFormState } from 'react-dom';
 export default function EditInvoiceForm({ invoice, customers }: { invoice: InvoiceForm; customers: CustomerField[] }) {
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
   const initialState = { message: null, errors: {} };
+  // @ts-ignore 
   const [state, dispatch] = useFormState(updateInvoiceWithId, initialState);
 
   return (
